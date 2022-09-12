@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link type="text/css" rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="card-back">
+   <img class="card-image-back" src="./images/bg-card-back.png">
+    <span class="card-cvv">000</span>
+  </div>
+  <div class="card-front">
+    <img class="card-image-front" src="./images/bg-card-front.png">
+    <img class="card-icon" src="./images/card-logo.svg">
+    <p class="card-number">0000 0000 0000 0000</p>
+    <div class="card-details">
+      <div class="name-container">  
+        <span class="card-name">Jane Appleseed</span>
+      </div>
+      <div class="date-container">
+        <span class="card-month">00</span>
+        <span>/</span>
+        <span class="card-year">00</span>
+      </div>
+    </div>
+  </div>
+  <div id="details-container" class="container">
+    <form class="form">
+      <p class="label">
+        Cardholder Name
+      </p>
+      <div class="input-border">
+        <input id="cardholder-name-input" class="input" placeholder="e.g. Jane Appleseed"> 
+        </div>
+        <span id="cardholder-name-input-error-text" class="message">Can't be blank</span>
+
+        <p class="label">
+          Card Number
+        </p>
+      
+      <!-- ADD FUCKIN DIVS TO IMPUTS OTHERWISE THIS SHIT WON'T WORK NIGGER-->
+      <div class="input-border">
+        <input id="cardnumber-input" class="input" placeholder="e.g. 1234 5678 9123 0000"> 
+        </div>
+      <span id="cardnumber-input-error-text" class="message">Can't be blank</span>
+      <span id="cardnumber-input-value-error-text" class="message">Wrong format, numbers only</span>
+        
+      <div class="details-grid">
+        <span class="label">
+          Exp. Date (MM/YY)
+        </span>
+        <span class="label">
+          CVC 
+        </span>
+        <div class="expiration-grid-item">
+          <!--<span class="label">
+            Exp. Date (MM/YY)
+          </span>-->
+          <div class="expiration-border">
+          <input id="expiration-month" class="small-input" placeholder="MM"> 
+          </div>
+          <div class="expiration-border">
+          <input id="expiration-year" class="small-input" placeholder="YY"> 
+          </div>
+        
+        
+        <!--<div class="cvv-flex-item">-->
+          <!--<span class="label">
+            CVC 
+          </span>-->
+          <div class="cvv-border">
+          <input id="form-cvv" placeholder="e.g. 123"> 
+          </div>
+        </div>
+        <span id="expiration-month-error-text" class="message">Can't be blank</span>
+        <span id="expiration-year-error-text" class="message">Can't be blank</span>
+        <span id="form-cvv-error-text" class="message">Can't be blank</span>
+        <!--</div>-->
+      </div>
+      <button class="button">Confirm</button>
+    </form>
+  </div>
+  <div id="thanks" class="container">
+    <img src="./images/icon-complete.svg" class="icon"/>
+    <h1 class="title">Thank you!</h1>
+    <p class="description">We've added your card details</p>
+    <button class="button" id="thanks-button">Continue</button>
+  </div>
+
+  
+
+  <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+-->
+  <script src="script.js">  
+  </script>  
+</body>
+</html>
